@@ -1,6 +1,7 @@
-# ReturnPolicy
+# # ReturnPolicy
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **categoryTypes** | [**\macropage\SDKs\ebay\rest\account\Model\CategoryType[]**](CategoryType.md) | For return policies, this field can be set to only ALL_EXCLUDING_MOTORS_VEHICLES (returns on motor vehicles are not processed through eBay flows) Default: ALL_EXCLUDING_MOTORS_VEHICLES (for return policies only) | [optional] 
@@ -18,6 +19,6 @@ Name | Type | Description | Notes
 **returnsAccepted** | **bool** | If set to true, the seller accepts returns. Call the getReturnPolicies in the Metadata API to see what categories require returns to be offered for listings in each category. Also, note that some European marketplaces (for example, UK, IE, and DE) require sellers to accept returns for fixed-price items and auctions listed with Buy It Now. For details, see Returns and the Law (UK). Note:Top-Rated sellers must accept item returns and the handlingTime should be set to zero days or one day for a listing to receive a Top-Rated Plus badge on the View Item or search result pages. For more information on eBay&#39;s Top-Rated seller program, see Becoming a Top Rated Seller and qualifying for Top Rated Plus benefits. | [optional] 
 **returnShippingCostPayer** | **string** | This field indicates who is responsible for paying for the shipping charges for returned items. The field can be set to either BUYER or SELLER. Depending on the return policy and specifics of the return, either the buyer or the seller can be responsible for the return shipping costs. Note that the seller is always responsible for return shipping costs for SNAD-related issues. For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/devzone/rest/api-ref/account/types/ReturnShippingCostPayerEnum.html&#39;&gt;eBay API documentation&lt;/a&gt; | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

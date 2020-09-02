@@ -1,6 +1,7 @@
-# PaymentPolicyRequest
+# # PaymentPolicyRequest
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **categoryTypes** | [**\macropage\SDKs\ebay\rest\account\Model\CategoryType[]**](CategoryType.md) | The CategoryTypeEnum value to which this policy applies. Used to discern accounts that sell motor vehicles from those that don&#39;t. (Currently, each policy can be set to only one categoryTypes value at a time.) | [optional] 
@@ -13,6 +14,6 @@ Name | Type | Description | Notes
 **paymentInstructions** | **string** | This user-defined field allows the seller to give payment instructions to the buyer. These instructions appear on the eBay View Item and Checkout pages. eBay recommends the seller use this field to clarify payment policies for motor vehicles (eBay Motors US and CA). For example, sellers can include the specifics on the deposit (if required), pickup/delivery arrangements, and full payment details on the vehicle. Max length: 500 | [optional] 
 **paymentMethods** | [**\macropage\SDKs\ebay\rest\account\Model\PaymentMethod[]**](PaymentMethod.md) | A list of the payment methods accepted by the seller. Each payment policy must specify at least one payment method. Note: Each eBay marketplace supports and requires its own set of payment methods, and not all marketplaces allow all payment methods. Check the specifics of the marketplaces where you list items to ensure your payment policies meet the payment method requirements needed for any specific listing. Note: Item listings created with the Inventory API must reference a payment policy that has this value set to PAYPAL (currently, the Inventory API supports only fixed-prince GTC items with immediate pay (which required payments to be made via PayPal). Payment policies used with motor vehicle listings that require a deposit must have PayPal listed has a payment method (deposits require PayPal as the payment method). Also, in order for a buyer to make a full payment on a US or CA motor vehicle, the payment policy must specify at least one of the following as a payment method: CashOnPickup LoanCheck MOCC (money order or cashier&#39;s check) PaymentSeeDescription (payment instructions are in the paymentInstructions field) PersonalCheck | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# Error
+# # Error
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **category** | **string** | The category type for this error or warning. It takes a string that can have one of three values: Application: Indicates an exception or error occurred in the application code or at runtime. Examples include catching an exception in a service&#39;s business logic, system failures, or request errors from a dependency. Business: Used when your service or a dependent service refused to continue processing on the resource because of a business rule violation such as &amp;quot;Seller does not ship item to Antarctica&amp;quot; or &amp;quot;Buyer ineligible to purchase an alcoholic item&amp;quot;. Business errors are not syntactical input errors. Request: Used when there is anything wrong with the request, such as authentication, syntactical errors, rate limiting or missing headers, bad HTTP header values, and so on. | [optional] 
@@ -13,6 +14,6 @@ Name | Type | Description | Notes
 **parameters** | [**\macropage\SDKs\ebay\rest\account\Model\ErrorParameter[]**](ErrorParameter.md) | This optional complex field type contains a list of one or more context-specific ErrorParameter objects, with each item in the list entry being a parameter (or input field name) that caused an error condition. Each ErrorParameter object consists of two fields, a name and a value. | [optional] 
 **subdomain** | **string** | Name of the domain&#39;s subsystem or subdivision. For example, checkout is a subdomain in the buying domain. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

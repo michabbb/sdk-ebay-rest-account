@@ -10,7 +10,9 @@ Method | HTTP request | Description
 [**getSalesTaxes**](SalesTaxApi.md#getSalesTaxes) | **GET** /sales_tax/ | 
 
 
-# **createOrReplaceSalesTax**
+
+## createOrReplaceSalesTax
+
 > createOrReplaceSalesTax($countryCode, $jurisdictionId, $salesTaxBase)
 
 
@@ -18,12 +20,15 @@ Method | HTTP request | Description
 This method creates or updates a sales tax table entry for a jurisdiction. Specify the tax table entry you want to configure using the two path parameters: countryCode and jurisdictionId. A tax table entry for a jurisdiction is comprised of two fields: one for the jurisdiction's sales-tax rate and another that's a boolean value indicating whether or not shipping and handling are taxed in the jurisdiction. You can set up tax tables for countries that support different tax jurisdictions. Currently, only Canada, India, and the US support separate tax jurisdictions. If you sell into any of these countries, you can set up tax tables for any of the country's jurisdictions. Retrieve valid jurisdiction IDs using getSalesTaxJurisdictions in the Metadata API. For details on using this call, see Establishing sales-tax tables.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: api_auth
 $config = macropage\SDKs\ebay\rest\account\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new macropage\SDKs\ebay\rest\account\Api\SalesTaxApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -45,6 +50,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **countryCode** | **string**| This path parameter specifies the two-letter ISO 3166-1 Alpha-2 code for the country for which you want to create tax table entry. |
@@ -61,12 +67,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **deleteSalesTax**
+
+## deleteSalesTax
+
 > deleteSalesTax($countryCode, $jurisdictionId)
 
 
@@ -74,12 +84,15 @@ void (empty response body)
 This call deletes a tax table entry for a jurisdiction. Specify the jurisdiction to delete using the countryCode and jurisdictionId path parameters.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: api_auth
 $config = macropage\SDKs\ebay\rest\account\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new macropage\SDKs\ebay\rest\account\Api\SalesTaxApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -100,6 +113,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **countryCode** | **string**| This path parameter specifies the two-letter ISO 3166-1 Alpha-2 code for the country whose tax table entry you want to delete. |
@@ -115,12 +129,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **getSalesTax**
+
+## getSalesTax
+
 > \macropage\SDKs\ebay\rest\account\Model\SalesTax getSalesTax($countryCode, $jurisdictionId)
 
 
@@ -128,12 +146,15 @@ void (empty response body)
 This call gets the current tax table entry for a specific tax jurisdiction. Specify the jurisdiction to retrieve using the countryCode and jurisdictionId path parameters.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: api_auth
 $config = macropage\SDKs\ebay\rest\account\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new macropage\SDKs\ebay\rest\account\Api\SalesTaxApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -155,6 +176,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **countryCode** | **string**| This path parameter specifies the two-letter ISO 3166-1 Alpha-2 code for the country whose tax table you want to retrieve. |
@@ -170,12 +192,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **getSalesTaxes**
+
+## getSalesTaxes
+
 > \macropage\SDKs\ebay\rest\account\Model\SalesTaxes getSalesTaxes($countryCode)
 
 
@@ -183,12 +209,15 @@ Name | Type | Description  | Notes
 Use this call to retrieve a sales tax table that the seller established for a specific country. Specify the tax table to retrieve using the country_code query parameter.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: api_auth
 $config = macropage\SDKs\ebay\rest\account\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new macropage\SDKs\ebay\rest\account\Api\SalesTaxApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -209,6 +238,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **countryCode** | **string**| This path parameter specifies the two-letter ISO 3166-1 Alpha-2 code for the country whose tax table you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/devzone/rest/api-ref/account/types/CountryCodeEnum.html |
@@ -223,8 +253,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

@@ -1,6 +1,7 @@
-# ShippingOption
+# # ShippingOption
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **costType** | **string** | Required if the policy offers shipping options using a shippingOptions container. Defines whether the shipping cost is FLAT_RATE, CALCULATED, or NOT_SPECIFIED (for use with freight shipping and local pickup). For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/devzone/rest/api-ref/account/types/ShippingCostTypeEnum.html&#39;&gt;eBay API documentation&lt;/a&gt; | [optional] 
@@ -11,6 +12,6 @@ Name | Type | Description | Notes
 **rateTableId** | **string** | A unique eBay-assigned ID associated with a user-created shipping rate table. The locality of a shipping rate table can be either DOMESTIC or INTERNATIONAL and you must ensure the value specified in this field references a shipping rate table that matches the type specified in the shippingOptions.optionType field. If you mismatch the types, eBay responds with a 20403 error. Call getRateTable to retrieve information (including rateTableId values) on the rate tables configured by a seller. For information on creating rate tables, see Using shipping rate tables. | [optional] 
 **shippingServices** | [**\macropage\SDKs\ebay\rest\account\Model\ShippingService[]**](ShippingService.md) | Required if the policy offers shipping options using a shippingOptions container. Contains a list of shipping services offered for either DOMESTIC or INTERNATIONAL shipments. Sellers can specify up to four domestic shipping services and up to five international shipping services by using separate shippingService containers for each. Note that if the seller is opted in to the Global Shipping Program, they can specify only four other international shipping services, regardless of whether or not Global Shipping is offered as one of the services. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

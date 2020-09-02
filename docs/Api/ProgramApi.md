@@ -9,7 +9,9 @@ Method | HTTP request | Description
 [**optOutOfProgram**](ProgramApi.md#optOutOfProgram) | **POST** /program/opt_out | 
 
 
-# **getOptedInPrograms**
+
+## getOptedInPrograms
+
 > \macropage\SDKs\ebay\rest\account\Model\Programs getOptedInPrograms()
 
 
@@ -17,12 +19,15 @@ Method | HTTP request | Description
 This method gets a list of the seller programs that the seller has opted-in to.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: api_auth
 $config = macropage\SDKs\ebay\rest\account\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new macropage\SDKs\ebay\rest\account\Api\ProgramApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -41,6 +46,7 @@ try {
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -53,12 +59,16 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **optInToProgram**
+
+## optInToProgram
+
 > object optInToProgram($program)
 
 
@@ -66,12 +76,15 @@ This endpoint does not need any parameter.
 This method opts the seller in to an eBay seller program. Currently available programs include the Out of Stock Control and the Selling Policy Management program. When you opt-in to the SELLING_POLICY_MANAGEMENT, eBay can associate the business policies you create with the items you list. Note: It can take up to 24-hours for eBay to process your request to opt-in to a Seller Program. Use the getOptedInPrograms call to check the status of your request after a processing period has passed.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: api_auth
 $config = macropage\SDKs\ebay\rest\account\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new macropage\SDKs\ebay\rest\account\Api\ProgramApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -92,6 +105,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **program** | [**\macropage\SDKs\ebay\rest\account\Model\Program**](../Model/Program.md)| Program being opted-in to. |
@@ -106,12 +120,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **optOutOfProgram**
+
+## optOutOfProgram
+
 > object optOutOfProgram($program)
 
 
@@ -119,12 +137,15 @@ Name | Type | Description  | Notes
 This method opts the seller out of a seller program to which you have previously opted-in to. Get a list of the seller programs you have opted-in to using the getOptedInPrograms call.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: api_auth
 $config = macropage\SDKs\ebay\rest\account\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new macropage\SDKs\ebay\rest\account\Api\ProgramApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -145,6 +166,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **program** | [**\macropage\SDKs\ebay\rest\account\Model\Program**](../Model/Program.md)| Program being opted-out of. |
@@ -159,8 +181,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

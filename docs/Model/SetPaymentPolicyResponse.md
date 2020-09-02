@@ -1,6 +1,7 @@
-# SetPaymentPolicyResponse
+# # SetPaymentPolicyResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **categoryTypes** | [**\macropage\SDKs\ebay\rest\account\Model\CategoryType[]**](CategoryType.md) | The CategoryTypeEnum value to which this policy applies. Used to discern accounts that sell motor vehicles from those that don&#39;t. (Currently, each policy can be set to only one categoryTypes value at a time.) | [optional] 
@@ -15,6 +16,6 @@ Name | Type | Description | Notes
 **paymentPolicyId** | **string** | A unique eBay-assigned ID for a payment policy. This ID is generated when the policy is created. | [optional] 
 **warnings** | [**\macropage\SDKs\ebay\rest\account\Model\Error[]**](Error.md) | A list of warnings related to request. This field normally returns empty, which indicates the request did not generate any warnings. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

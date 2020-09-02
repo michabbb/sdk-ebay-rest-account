@@ -1,6 +1,7 @@
-# FulfillmentPolicyResponse
+# # FulfillmentPolicyResponse
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **fulfillmentPolicies** | [**\macropage\SDKs\ebay\rest\account\Model\FulfillmentPolicy[]**](FulfillmentPolicy.md) | A list of the seller&#39;s fulfillment policies. | [optional] 
@@ -11,6 +12,6 @@ Name | Type | Description | Notes
 **prev** | **string** | Returns a URL link to the previous set of results. | [optional] 
 **total** | **int** | Returns the total number of result sets in the paginated collection. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

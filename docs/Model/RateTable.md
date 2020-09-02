@@ -1,6 +1,7 @@
-# RateTable
+# # RateTable
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **countryCode** | **string** | A two-letter ISO 3166-1 Alpha-2 country code representing the eBay marketplace where an item is listed. For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/devzone/rest/api-ref/account/types/CountryCodeEnum.html&#39;&gt;eBay API documentation&lt;/a&gt; | [optional] 
@@ -8,6 +9,6 @@ Name | Type | Description | Notes
 **name** | **string** | The user-defined name for the shipping rate table. Sellers can access Seller Hub (or My eBay &amp;gt; Account &amp;gt; Site Preferences &amp;gt; Shipping preferences) to create and assign names to their shipping rate tables. | [optional] 
 **rateTableId** | **string** | A unique eBay-assigned ID for a seller&#39;s shipping rate table. Call getRateTables to retrieve the seller&#39;s current rate table IDs. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 
