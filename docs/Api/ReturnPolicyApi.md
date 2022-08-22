@@ -1,25 +1,26 @@
 # macropage\SDKs\ebay\rest\account\ReturnPolicyApi
 
-All URIs are relative to *https://api.ebay.com/sell/account/v1*
+All URIs are relative to https://api.ebay.com/sell/account/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**createReturnPolicy**](ReturnPolicyApi.md#createReturnPolicy) | **POST** /return_policy/ | 
-[**deleteReturnPolicy**](ReturnPolicyApi.md#deleteReturnPolicy) | **DELETE** /return_policy/{return_policy_id} | 
-[**getReturnPolicies**](ReturnPolicyApi.md#getReturnPolicies) | **GET** /return_policy/ | 
-[**getReturnPolicy**](ReturnPolicyApi.md#getReturnPolicy) | **GET** /return_policy/{return_policy_id} | 
-[**getReturnPolicyByName**](ReturnPolicyApi.md#getReturnPolicyByName) | **GET** /return_policy/get_by_policy_name | 
-[**updateReturnPolicy**](ReturnPolicyApi.md#updateReturnPolicy) | **PUT** /return_policy/{return_policy_id} | 
-
-
-
-## createReturnPolicy
-
-> \macropage\SDKs\ebay\rest\account\Model\SetReturnPolicyResponse createReturnPolicy($returnPolicyRequest)
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**createReturnPolicy()**](ReturnPolicyApi.md#createReturnPolicy) | **POST** /return_policy |  |
+| [**deleteReturnPolicy()**](ReturnPolicyApi.md#deleteReturnPolicy) | **DELETE** /return_policy/{return_policy_id} |  |
+| [**getReturnPolicies()**](ReturnPolicyApi.md#getReturnPolicies) | **GET** /return_policy |  |
+| [**getReturnPolicy()**](ReturnPolicyApi.md#getReturnPolicy) | **GET** /return_policy/{return_policy_id} |  |
+| [**getReturnPolicyByName()**](ReturnPolicyApi.md#getReturnPolicyByName) | **GET** /return_policy/get_by_policy_name |  |
+| [**updateReturnPolicy()**](ReturnPolicyApi.md#updateReturnPolicy) | **PUT** /return_policy/{return_policy_id} |  |
 
 
+## `createReturnPolicy()`
 
-This method creates a new return policy where the policy encapsulates seller's terms for returning items. Use the Metadata API method getReturnPolicies to determine which categories require you to supply a return policy for the marketplace(s) into which you list. Each policy targets a marketplaceId and categoryTypes.name combination and you can create multiple policies for each combination. A successful request returns the URI to the new policy in the Location response header and the ID for the new policy is returned in the response payload. Tip: For details on creating and using the business policies supported by the Account API, see eBay business policies. Marketplaces and locales Policy instructions can be localized by providing a locale in the Accept-Language HTTP request header. For example, the following setting displays field values from the request body in German: Accept-Language: de-DE. Target the specific locale of a marketplace that supports multiple locales using the Content-Language request header. For example, target the French locale of the Canadian marketplace by specifying the fr-CA locale for Content-Language. Likewise, target the Dutch locale of the Belgium marketplace by setting Content-Language: fr-BE. Tip: For details on headers, see HTTP request headers.
+```php
+createReturnPolicy($returnPolicyRequest): \macropage\SDKs\ebay\rest\account\Model\SetReturnPolicyResponse
+```
+
+
+
+This method creates a new return policy where the policy encapsulates seller's terms for returning items.  <br/><br/>Each policy targets a specific marketplace, and you can create multiple policies for each marketplace. Return policies are not applicable to motor-vehicle listings.<br/><br/>A successful request returns the <b>getReturnPolicy</b> URI to the new policy in the <b>Location</b> response header and the ID for the new policy is returned in the response payload.  <p class=\"tablenote\"><b>Tip:</b> For details on creating and using the business policies supported by the Account API, see <a href=\"/api-docs/sell/static/seller-accounts/business-policies.html\">eBay business policies</a>.</p>
 
 ### Example
 
@@ -46,15 +47,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ReturnPolicyApi->createReturnPolicy: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **returnPolicyRequest** | [**\macropage\SDKs\ebay\rest\account\Model\ReturnPolicyRequest**](../Model/ReturnPolicyRequest.md)| Return policy request |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **returnPolicyRequest** | [**\macropage\SDKs\ebay\rest\account\Model\ReturnPolicyRequest**](../Model/ReturnPolicyRequest.md)| Return policy request | |
 
 ### Return type
 
@@ -66,21 +65,22 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteReturnPolicy()`
 
-## deleteReturnPolicy
+```php
+deleteReturnPolicy($returnPolicyId)
+```
 
-> deleteReturnPolicy($returnPolicyId)
 
 
-
-This method deletes a return policy. Supply the ID of the policy you want to delete in the returnPolicyId path parameter. Note that you cannot delete the default return policy.
+This method deletes a return policy. Supply the ID of the policy you want to delete in the <b>returnPolicyId</b> path parameter.
 
 ### Example
 
@@ -106,15 +106,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ReturnPolicyApi->deleteReturnPolicy: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **returnPolicyId** | **string**| This path parameter specifies the ID of the return policy you want to delete. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **returnPolicyId** | **string**| This path parameter specifies the ID of the return policy you want to delete. | |
 
 ### Return type
 
@@ -127,20 +125,21 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getReturnPolicies()`
 
-## getReturnPolicies
+```php
+getReturnPolicies($marketplaceId): \macropage\SDKs\ebay\rest\account\Model\ReturnPolicyResponse
+```
 
-> \macropage\SDKs\ebay\rest\account\Model\ReturnPolicyResponse getReturnPolicies($marketplaceId)
 
 
-
-This method retrieves all the return policies configured for the marketplace you specify using the marketplace_id query parameter. Marketplaces and locales Get the correct policies for a marketplace that supports multiple locales using the Content-Language request header. For example, get the policies for the French locale of the Canadian marketplace by specifying fr-CA for the Content-Language header. Likewise, target the Dutch locale of the Belgium marketplace by setting Content-Language: fr-BE. For details on header values, see HTTP request headers.
+This method retrieves all the return policies configured for the marketplace you specify using the <code>marketplace_id</code> query parameter.  <br/><br/><b>Marketplaces and locales</b>  <br/><br/>Get the correct policies for a marketplace that supports multiple locales using the <code>Content-Language</code> request header. For example, get the policies for the French locale of the Canadian marketplace by specifying <code>fr-CA</code> for the <code>Content-Language</code> header. Likewise, target the Dutch locale of the Belgium marketplace by setting <code>Content-Language: nl-BE</code>. For details on header values, see <a href=\"/api-docs/static/rest-request-components.html#HTTP\" target=\"_blank\">HTTP request headers</a>.
 
 ### Example
 
@@ -159,7 +158,7 @@ $apiInstance = new macropage\SDKs\ebay\rest\account\Api\ReturnPolicyApi(
     new GuzzleHttp\Client(),
     $config
 );
-$marketplaceId = 'marketplaceId_example'; // string | This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/devzone/rest/api-ref/account/types/MarketplaceIdEnum.html
+$marketplaceId = 'marketplaceId_example'; // string | This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum
 
 try {
     $result = $apiInstance->getReturnPolicies($marketplaceId);
@@ -167,15 +166,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ReturnPolicyApi->getReturnPolicies: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **marketplaceId** | **string**| This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/devzone/rest/api-ref/account/types/MarketplaceIdEnum.html |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **marketplaceId** | **string**| This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum | |
 
 ### Return type
 
@@ -188,20 +185,21 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getReturnPolicy()`
 
-## getReturnPolicy
+```php
+getReturnPolicy($returnPolicyId): \macropage\SDKs\ebay\rest\account\Model\ReturnPolicy
+```
 
-> \macropage\SDKs\ebay\rest\account\Model\ReturnPolicy getReturnPolicy($returnPolicyId)
 
 
-
-This method retrieves the complete details of the return policy specified by the returnPolicyId path parameter.
+This method retrieves the complete details of the return policy specified by the <b>returnPolicyId</b> path parameter.
 
 ### Example
 
@@ -228,15 +226,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ReturnPolicyApi->getReturnPolicy: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **returnPolicyId** | **string**| This path parameter specifies the of the return policy you want to retrieve. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **returnPolicyId** | **string**| This path parameter specifies the of the return policy you want to retrieve. | |
 
 ### Return type
 
@@ -249,20 +245,21 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `getReturnPolicyByName()`
 
-## getReturnPolicyByName
+```php
+getReturnPolicyByName($marketplaceId, $name): \macropage\SDKs\ebay\rest\account\Model\ReturnPolicy
+```
 
-> \macropage\SDKs\ebay\rest\account\Model\ReturnPolicy getReturnPolicyByName($marketplaceId, $name)
 
 
-
-This method retrieves the complete details of a single return policy. Supply both the policy name and its associated marketplace_id in the request query parameters. Marketplaces and locales Get the correct policy for a marketplace that supports multiple locales using the Content-Language request header. For example, get a policy for the French locale of the Canadian marketplace by specifying fr-CA for the Content-Language header. Likewise, target the Dutch locale of the Belgium marketplace by setting Content-Language: fr-BE. For details on header values, see HTTP request headers.
+This method retrieves the details of a specific return policy. Supply both the policy <code>name</code> and its associated <code>marketplace_id</code> in the request query parameters.   <br/><br/><b>Marketplaces and locales</b>  <br/><br/>Get the correct policy for a marketplace that supports multiple locales using the <code>Content-Language</code> request header. For example, get a policy for the French locale of the Canadian marketplace by specifying <code>fr-CA</code> for the <code>Content-Language</code> header. Likewise, target the Dutch locale of the Belgium marketplace by setting <code>Content-Language: nl-BE</code>. For details on header values, see <a href=\"/api-docs/static/rest-request-components.html#HTTP\">HTTP request headers</a>.
 
 ### Example
 
@@ -281,8 +278,8 @@ $apiInstance = new macropage\SDKs\ebay\rest\account\Api\ReturnPolicyApi(
     new GuzzleHttp\Client(),
     $config
 );
-$marketplaceId = 'marketplaceId_example'; // string | This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/devzone/rest/api-ref/account/types/MarketplaceIdEnum.html
-$name = 'name_example'; // string | This query parameter specifies the user-defined name of the return policy you want to retrieve.
+$marketplaceId = 'marketplaceId_example'; // string | This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum
+$name = 'name_example'; // string | This query parameter specifies the seller-defined name of the return policy you want to retrieve.
 
 try {
     $result = $apiInstance->getReturnPolicyByName($marketplaceId, $name);
@@ -290,16 +287,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ReturnPolicyApi->getReturnPolicyByName: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **marketplaceId** | **string**| This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/devzone/rest/api-ref/account/types/MarketplaceIdEnum.html |
- **name** | **string**| This query parameter specifies the user-defined name of the return policy you want to retrieve. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **marketplaceId** | **string**| This query parameter specifies the ID of the eBay marketplace of the policy you want to retrieve. For implementation help, refer to eBay API documentation at https://developer.ebay.com/api-docs/sell/account/types/ba:MarketplaceIdEnum | |
+| **name** | **string**| This query parameter specifies the seller-defined name of the return policy you want to retrieve. | |
 
 ### Return type
 
@@ -312,20 +307,21 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateReturnPolicy()`
 
-## updateReturnPolicy
+```php
+updateReturnPolicy($returnPolicyId, $returnPolicyRequest): \macropage\SDKs\ebay\rest\account\Model\SetReturnPolicyResponse
+```
 
-> \macropage\SDKs\ebay\rest\account\Model\SetReturnPolicyResponse updateReturnPolicy($returnPolicyId, $returnPolicyRequest)
 
 
-
-This method updates an existing return policy. Specify the policy you want to update using the return_policy_id path parameter. Supply a complete policy payload with the updates you want to make; this call overwrites the existing policy with the new details specified in the payload.
+This method updates an existing return policy. Specify the policy you want to update using the <b>return_policy_id</b> path parameter. Supply a complete policy payload with the updates you want to make; this call overwrites the existing policy with the new details specified in the payload.
 
 ### Example
 
@@ -353,16 +349,14 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ReturnPolicyApi->updateReturnPolicy: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **returnPolicyId** | **string**| This path parameter specifies the ID of the return policy you want to update. |
- **returnPolicyRequest** | [**\macropage\SDKs\ebay\rest\account\Model\ReturnPolicyRequest**](../Model/ReturnPolicyRequest.md)| Container for a return policy request. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **returnPolicyId** | **string**| This path parameter specifies the ID of the return policy you want to update. | |
+| **returnPolicyRequest** | [**\macropage\SDKs\ebay\rest\account\Model\ReturnPolicyRequest**](../Model/ReturnPolicyRequest.md)| Container for a return policy request. | |
 
 ### Return type
 
@@ -374,10 +368,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

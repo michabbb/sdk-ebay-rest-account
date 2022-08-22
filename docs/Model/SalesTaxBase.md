@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**salesTaxPercentage** | **string** | The sales tax rate, as a percentage of the sale. | [optional] 
-**shippingAndHandlingTaxed** | **bool** | If set to true, shipping and handling charges are taxed. | [optional] 
+**salesTaxPercentage** | **string** | This field is used to set the sales tax rate for the tax jurisdiction set in the call URI. When applicable to an order, this sales tax rate will be applied to sales price. The &lt;b&gt;shippingAndHandlingTaxed&lt;/b&gt; value will indicate whether or not sales tax is also applied to shipping and handling charges&lt;br&gt;&lt;br&gt;Although it is a string, a percentage value is set here, such as &lt;code&gt;7.75&lt;/code&gt;. | [optional]
+**shippingAndHandlingTaxed** | **bool** | This field is set to &lt;code&gt;true&lt;/code&gt; if the seller wishes to apply sales tax to shipping and handling charges, and not just the total sales price of the order. Otherwise, this field&#39;s value should be set to &lt;code&gt;false&lt;/code&gt;. | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

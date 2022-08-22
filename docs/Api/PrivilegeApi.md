@@ -1,20 +1,21 @@
 # macropage\SDKs\ebay\rest\account\PrivilegeApi
 
-All URIs are relative to *https://api.ebay.com/sell/account/v1*
+All URIs are relative to https://api.ebay.com/sell/account/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getPrivileges**](PrivilegeApi.md#getPrivileges) | **GET** /privilege/ | 
-
-
-
-## getPrivileges
-
-> \macropage\SDKs\ebay\rest\account\Model\SellingPrivileges getPrivileges()
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getPrivileges()**](PrivilegeApi.md#getPrivileges) | **GET** /privilege |  |
 
 
+## `getPrivileges()`
 
-This method retrieves the seller's current set of privileges. The call returns whether or not the seller's eBay registration has been completed, as well as the details of their site-wide sellingLimt (the amount and quantity they can sell on a given day).
+```php
+getPrivileges(): \macropage\SDKs\ebay\rest\account\Model\SellingPrivileges
+```
+
+
+
+This method retrieves the seller's current set of privileges, including whether or not the seller's eBay registration has been completed, as well as the details of their site-wide <b>sellingLimt</b> (the amount and quantity they can sell on a given day).
 
 ### Example
 
@@ -40,7 +41,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PrivilegeApi->getPrivileges: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -58,9 +58,8 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

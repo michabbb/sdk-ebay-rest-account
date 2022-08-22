@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**unit** | **string** | Required in the TimeDuration container. A time-measurement unit used to specify a period of time. Time-measurement units can be years, months, days, hours, minutes, and other time units (see TimeDurationUnitEnum for a complete list of possible units). The unit is applied to the number in the value field to define a span of time. See the containing object for details and call GeteBayDetails in the Trading API to get the allowable values for the specific object you&#39;re configuring. For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/devzone/rest/api-ref/account/types/TimeDurationUnitEnum.html&#39;&gt;eBay API documentation&lt;/a&gt; | [optional] 
-**value** | **int** | Required in the TimeDuration container. An amount of time, as measured by the time-measurement units specified in the unit field. Supported values for this field vary according to the object using the time duration. See the containing object for details and call GeteBayDetails in the Trading API to get the allowable values for the specific object you&#39;re configuring. | [optional] 
+**unit** | **string** | These enum values represent the time measurement unit, such as &lt;code&gt;DAY&lt;/code&gt;. A span of time is defined when you apply the value specified in the &lt;b&gt;value&lt;/b&gt; field to the value specified for &lt;b&gt;unit&lt;/b&gt;. &lt;br/&gt;&lt;br/&gt;See &lt;b&gt;TimeDurationUnitEnum&lt;/b&gt; for a complete list of possible time-measurement units. For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/api-docs/sell/account/types/ba:TimeDurationUnitEnum&#39;&gt;eBay API documentation&lt;/a&gt; | [optional]
+**value** | **int** | An integer that represents an amount of time, as measured by the time-measurement unit specified in the &lt;b&gt;unit&lt;/b&gt; field. | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

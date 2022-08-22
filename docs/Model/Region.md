@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**regionName** | **string** | A string that indicates the name of a region, as defined by eBay. A &amp;quot;region&amp;quot; can be either a &#39;world region&#39; (e.g., the &amp;quot;Middle East&amp;quot; or &amp;quot;Southeast Asia&amp;quot;) or a country, as represented with a two-letter country code. Use GeteBayDetails to get the values accepted by this field. The values that you&#39;re allowed to use for a specific regionName field depend on the context in which you are setting the value. For details on how to set the values for this field, see The shipToLocations container. | [optional] 
-**regionType** | **string** | Reserved for future use. For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/devzone/rest/api-ref/account/types/RegionTypeEnum.html&#39;&gt;eBay API documentation&lt;/a&gt; | [optional] 
+**regionName** | **string** | A string that indicates the name of a region, as defined by eBay. A \&quot;region\&quot; can be either a &#39;world region&#39; (e.g., the \&quot;Middle East\&quot; or \&quot;Southeast Asia\&quot;), a country (represented with a two-letter country code), a state or province (represented with a two-letter code), or a special domestic region within a country. The &lt;b&gt;GeteBayDetails&lt;/b&gt; call in the Trading API can be used to retrieve the world regions and special domestic regions within a specific country. To get these enumeration values, call &lt;b&gt;GeteBayDetails&lt;/b&gt;with the &lt;b&gt;DetailName&lt;/b&gt; value set to &lt;b&gt;ExcludeShippingLocationDetails&lt;/b&gt;. | [optional]
+**regionType** | **string** | Reserved for future use. &lt;!--The region&#39;s type, which can be one of the following: &#39;COUNTRY&#39;, &#39;COUNTRY_REGION&#39;, &#39;STATE_OR_PROVINCE&#39;, &#39;WORLD_REGION&#39;, or &#39;WORLDWIDE&#39;.--&gt; For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/api-docs/sell/account/types/ba:RegionTypeEnum&#39;&gt;eBay API documentation&lt;/a&gt; | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

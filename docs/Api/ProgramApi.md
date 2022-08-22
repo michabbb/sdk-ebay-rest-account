@@ -1,18 +1,19 @@
 # macropage\SDKs\ebay\rest\account\ProgramApi
 
-All URIs are relative to *https://api.ebay.com/sell/account/v1*
+All URIs are relative to https://api.ebay.com/sell/account/v1, except if the operation defines another base path.
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**getOptedInPrograms**](ProgramApi.md#getOptedInPrograms) | **GET** /program/get_opted_in_programs | 
-[**optInToProgram**](ProgramApi.md#optInToProgram) | **POST** /program/opt_in | 
-[**optOutOfProgram**](ProgramApi.md#optOutOfProgram) | **POST** /program/opt_out | 
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**getOptedInPrograms()**](ProgramApi.md#getOptedInPrograms) | **GET** /program/get_opted_in_programs |  |
+| [**optInToProgram()**](ProgramApi.md#optInToProgram) | **POST** /program/opt_in |  |
+| [**optOutOfProgram()**](ProgramApi.md#optOutOfProgram) | **POST** /program/opt_out |  |
 
 
+## `getOptedInPrograms()`
 
-## getOptedInPrograms
-
-> \macropage\SDKs\ebay\rest\account\Model\Programs getOptedInPrograms()
+```php
+getOptedInPrograms(): \macropage\SDKs\ebay\rest\account\Model\Programs
+```
 
 
 
@@ -42,7 +43,6 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ProgramApi->getOptedInPrograms: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
@@ -60,20 +60,21 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `optInToProgram()`
 
-## optInToProgram
+```php
+optInToProgram($program): object
+```
 
-> object optInToProgram($program)
 
 
-
-This method opts the seller in to an eBay seller program. Currently available programs include the Out of Stock Control and the Selling Policy Management program. When you opt-in to the SELLING_POLICY_MANAGEMENT, eBay can associate the business policies you create with the items you list. Note: It can take up to 24-hours for eBay to process your request to opt-in to a Seller Program. Use the getOptedInPrograms call to check the status of your request after a processing period has passed.
+This method opts the seller in to an eBay seller program. Refer to the <a href=\"/api-docs/sell/account/overview.html#opt-in\" target=\"_blank\">Account API overview</a> for information about available eBay seller programs.<br /><br /><span class=\"tablenote\"><b>Note:</b> It can take up to 24-hours for eBay to process your request to opt-in to a Seller Program. Use the <a href=\"/api-docs/sell/account/resources/program/methods/getOptedInPrograms\" target=\"_blank\">getOptedInPrograms</a> call to check the status of your request after the processing period has passed.</span>
 
 ### Example
 
@@ -100,15 +101,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ProgramApi->optInToProgram: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **program** | [**\macropage\SDKs\ebay\rest\account\Model\Program**](../Model/Program.md)| Program being opted-in to. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **program** | [**\macropage\SDKs\ebay\rest\account\Model\Program**](../Model/Program.md)| Program being opted-in to. | |
 
 ### Return type
 
@@ -120,21 +119,22 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `optOutOfProgram()`
 
-## optOutOfProgram
+```php
+optOutOfProgram($program): object
+```
 
-> object optOutOfProgram($program)
 
 
-
-This method opts the seller out of a seller program to which you have previously opted-in to. Get a list of the seller programs you have opted-in to using the getOptedInPrograms call.
+This method opts the seller out of a seller program to which you have previously opted-in to. Get a list of the seller programs you have opted-in to using the <b>getOptedInPrograms</b> call.
 
 ### Example
 
@@ -161,15 +161,13 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling ProgramApi->optOutOfProgram: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **program** | [**\macropage\SDKs\ebay\rest\account\Model\Program**](../Model/Program.md)| Program being opted-out of. |
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **program** | [**\macropage\SDKs\ebay\rest\account\Model\Program**](../Model/Program.md)| Program being opted-out of. | |
 
 ### Return type
 
@@ -181,10 +179,9 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: application/json
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

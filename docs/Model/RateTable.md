@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**countryCode** | **string** | A two-letter ISO 3166-1 Alpha-2 country code representing the eBay marketplace where an item is listed. For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/devzone/rest/api-ref/account/types/CountryCodeEnum.html&#39;&gt;eBay API documentation&lt;/a&gt; | [optional] 
-**locality** | **string** | The region covered by the shipping rate table, either DOMESTIC or INTERNATIONAL. DOMESTIC indicates that the shipping rate table applies to regions within the country where an item is listed (the source country) while INTERNATIONAL indicates that the shipping rate table applies to regions outside of the country where an item is listed. For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/devzone/rest/api-ref/account/types/ShippingOptionTypeEnum.html&#39;&gt;eBay API documentation&lt;/a&gt; | [optional] 
-**name** | **string** | The user-defined name for the shipping rate table. Sellers can access Seller Hub (or My eBay &amp;gt; Account &amp;gt; Site Preferences &amp;gt; Shipping preferences) to create and assign names to their shipping rate tables. | [optional] 
-**rateTableId** | **string** | A unique eBay-assigned ID for a seller&#39;s shipping rate table. Call getRateTables to retrieve the seller&#39;s current rate table IDs. | [optional] 
+**countryCode** | **string** | A two-letter &lt;a href&#x3D;\&quot;https://www.iso.org/iso-3166-country-codes.html\&quot; title&#x3D;\&quot;https://www.iso.org\&quot; target&#x3D;\&quot;_blank\&quot;&gt;ISO 3166&lt;/a&gt; country code representing the eBay marketplace where the shipping rate table is defined. For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/api-docs/sell/account/types/ba:CountryCodeEnum&#39;&gt;eBay API documentation&lt;/a&gt; | [optional]
+**locality** | **string** | This enumeration value returned here indicates whether the shipping rate table is a domestic or international shipping rate table. For implementation help, refer to &lt;a href&#x3D;&#39;https://developer.ebay.com/api-docs/sell/account/types/api:ShippingOptionTypeEnum&#39;&gt;eBay API documentation&lt;/a&gt; | [optional]
+**name** | **string** | The seller-defined name for the shipping rate table. | [optional]
+**rateTableId** | **string** | A unique eBay-assigned ID for a seller&#39;s shipping rate table. These &lt;b&gt;rateTableId&lt;/b&gt; values are used to associate shipping rate tables to fulfillment business policies or directly to listings through an add/revise/relist call in the Trading API. | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

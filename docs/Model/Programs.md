@@ -4,8 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**programs** | [**\macropage\SDKs\ebay\rest\account\Model\Program[]**](Program.md) | A list of seller programs. | [optional] 
+**programs** | [**\macropage\SDKs\ebay\rest\account\Model\Program[]**](Program.md) | An array of seller programs that the seller&#39;s account is opted in to. | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

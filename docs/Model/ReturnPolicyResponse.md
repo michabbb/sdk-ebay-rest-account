@@ -4,14 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**href** | **string** | Returns a URL link to the current result set. | [optional] 
-**limit** | **int** | Returns the maximum number of results that can be returned in result set. | [optional] 
-**next** | **string** | Returns a URL link to the next set of results. | [optional] 
-**offset** | **int** | Returns how many result sets were skipped before the currently returned result set. | [optional] 
-**prev** | **string** | Returns a URL link to the previous set of results. | [optional] 
-**returnPolicies** | [**\macropage\SDKs\ebay\rest\account\Model\ReturnPolicy[]**](ReturnPolicy.md) | A list of the seller&#39;s return policies. | [optional] 
-**total** | **int** | Returns the total number of result sets in the paginated collection. | [optional] 
+**href** | **string** | This field is for future use. | [optional]
+**limit** | **int** | This field is for future use. | [optional]
+**next** | **string** | This field is for future use. | [optional]
+**offset** | **int** | This field is for future use. | [optional]
+**prev** | **string** | This field is for future use. | [optional]
+**returnPolicies** | [**\macropage\SDKs\ebay\rest\account\Model\ReturnPolicy[]**](ReturnPolicy.md) | A list of all of the seller&#39;s return business policies defined for the specified marketplace. This array will be returned as empty if no return business policies are defined for the specified marketplace. | [optional]
+**total** | **int** | The total number of return business policies retrieved in the result set.  &lt;br/&gt;&lt;br/&gt;If no return business policies are defined for the specified marketplace, this field is returned with a value of &lt;code&gt;0&lt;/code&gt;. | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
